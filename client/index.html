@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Speaking Assessment Report</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-comment-dots"></i>
+                <h1>Student Assessment Report</h1>
+            </div>
+            <div class="student-info">
+                <div class="info-item">
+                    <span class="label">Student:</span>
+                    <span class="value" id="studentName">Alex Johnson</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Test Date:</span>
+                    <span class="value" id="testDate">January 15, 2024</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Test Type:</span>
+                    <span class="value" id="testType">Speaking Assessment</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Overall Score Section -->
+        <section class="overall-score-section">
+            <h2><i class="fas fa-star"></i> Overall Speaking Score</h2>
+            <div class="overall-score-container">
+                <div class="score-circle">
+                    <div class="score-value">
+                        <span id="overallScore">7</span>
+                        <span class="score-out-of">/ 9</span>
+                    </div>
+                    <div class="score-label">Overall Band</div>
+                </div>
+                <div class="score-description">
+                    <p>This score represents the student's overall speaking proficiency level on a 9-band scale.</p>
+                    <div class="band-info">
+                        <div class="band-item">
+                            <span class="band-level">Band 9</span>
+                            <span class="band-desc">Expert User</span>
+                        </div>
+                        <div class="band-item">
+                            <span class="band-level">Band 7-8</span>
+                            <span class="band-desc">Good User</span>
+                        </div>
+                        <div class="band-item">
+                            <span class="band-level">Band 5-6</span>
+                            <span class="band-desc">Competent User</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <h2><i class="fas fa-chart-bar"></i> Skill-wise Assessment</h2>
+            <div class="skills-container">
+            </div>
+        </section>
+
+        <!-- Chart Section -->
+        <section class="chart-section">
+            <h2><i class="fas fa-chart-pie"></i> Skills Visualization</h2>
+            <div class="chart-container">
+                <canvas id="skillsChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Feedback Section -->
+        <section class="feedback-section">
+            <h2><i class="fas fa-comment-medical"></i> Descriptive Feedback</h2>
+            <div class="feedback-container">
+                <div class="feedback-header">
+                    <h3 id="feedbackTitle">Good Performance</h3>
+                    <div class="feedback-badge" id="feedbackBadge">Band 7</div>
+                </div>
+                <p id="feedbackDescription" class="feedback-desc">
+                    Generally effective command of the language despite some inaccuracies. Can handle complex situations fairly well.
+                </p>
+                <div class="suggestions">
+                    <h4><i class="fas fa-lightbulb"></i> Suggestions for Improvement:</h4>
+                    <ul id="suggestionsList">
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Control Section -->
+        <section class="controls-section">
+            <h2><i class="fas fa-sliders-h"></i> Test Different Scores</h2>
+            <p class="controls-note">Adjust scores to see how feedback changes dynamically</p>
+            <div class="controls-container">
+                <div class="control-group">
+                    <label for="overallControl">Overall Score:</label>
+                    <input type="range" id="overallControl" min="1" max="9" value="7" class="score-slider">
+                    <span id="overallValue">7</span>
+                </div>
+                <div class="control-group">
+                    <label for="pronunciationControl">Pronunciation:</label>
+                    <input type="range" id="pronunciationControl" min="1" max="9" value="7" class="score-slider">
+                    <span id="pronunciationValue">7</span>
+                </div>
+                <div class="control-group">
+                    <label for="fluencyControl">Fluency:</label>
+                    <input type="range" id="fluencyControl" min="1" max="9" value="6" class="score-slider">
+                    <span id="fluencyValue">6</span>
+                </div>
+                <button id="updateScores" class="update-btn">
+                    <i class="fas fa-sync-alt"></i> Update Scores
+                </button>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Student Assessment Report System • Generated on <span id="currentDate">January 15, 2024</span></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

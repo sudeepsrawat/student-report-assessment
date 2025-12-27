@@ -1,0 +1,23 @@
+{
+  "student": {
+    "id": "STU001",
+    "name": "Alex Johnson",
+    "testDate": "2024-01-15",
+    "testType": "Speaking Assessment"
+  },
+  "overallScore": 7,
+  "skills": {
+    "pronunciation": 7,
+    "fluency": 4,
+    "vocabulary": 8,
+    "grammar": 6
+  },
+  "feedback": {
+    "title": "Good Performance",
+    "description": "Generally effective command of the language despite some inaccuracies. Can handle complex situations fairly well.",
+    "suggestions": [
+      "Work on grammatical accuracy",
+      "Practice speaking on unfamiliar topics"
+    ]
+  }
+}
